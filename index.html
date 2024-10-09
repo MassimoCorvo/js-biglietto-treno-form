@@ -17,7 +17,7 @@
     <h1 class="mb-3 text-center fw-bold">Biglietto del treno</h1>
 
     <!-- Inizio container -->
-    <div class="container bg-info py-2">
+    <div class="container bg-info py-2 rounded-3">
         <div class="row">
             
             <!-- Inizio form -->
@@ -28,12 +28,14 @@
                     <label for="formKm" class="form-label">Numero di chilometri</label>
                     <input type="number" class="form-control" id="formKm"
                         placeholder="Inserire il numero di chilometri">
+                    <span id="errorKm" class="text-danger fw-normal"></span>
                 </div>
 
                 <!-- Input età -->
                 <div class="col-12 mb-3 text-light fw-bold">
                     <label for="formAge" class="form-label">Età</label>
                     <input type="number" class="form-control" id="formAge" placeholder="Inserire età passeggero">
+                    <span id="errorAge" class="text-danger fw-normal"></span>
                 </div>
 
                 <!-- Submit -->

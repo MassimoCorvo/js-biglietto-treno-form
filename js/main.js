@@ -5,6 +5,11 @@ const formKm = document.getElementById("formKm");
 const formAge = document.getElementById("formAge");
 
 myForm.addEventListener("submit", function (event) {
+
+    document.getElementById("errorKm").classList.add("d-none");
+    document.getElementById("errorAge").classList.add("d-none");
+    
+
     event.preventDefault();
 
     const km = Number(formKm.value);
@@ -14,12 +19,19 @@ myForm.addEventListener("submit", function (event) {
     console.log("Età", age);
 
     if (isNaN(km) || isNaN(age) || km <= 0 || age > 120 || age <= 0) {
+        
         if (isNaN(km) || km <= 0) {
-            alert("Numero chilometri non valido");
+            //alert("Numero chilometri non valido");
+           const errorKm = document.getElementById("errorKm");
+           errorKm.classList.remove("d-none");
+           errorKm.innerHTML = "Numero chilometri non valido";
         }
 
         if (isNaN(age) || age > 120 || age <= 0) {
-            alert("Età non valida");
+            //alert("Età non valida");
+            const errorAge = document.getElementById("errorAge");
+            errorAge.classList.remove("d-none");
+            errorAge.innerHTML = "Età non valida";
         }
     }
 
