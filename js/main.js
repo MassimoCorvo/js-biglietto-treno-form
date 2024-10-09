@@ -46,8 +46,8 @@ myForm.addEventListener("submit", function (event) {
 
     }
 
-    formAge.value = 0;
-    formKm.value = 0;
+    formAge.value = null;
+    formKm.value = null;
 
 
 })
