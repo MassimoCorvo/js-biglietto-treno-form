@@ -49,5 +49,4 @@ myForm.addEventListener("submit", function (event) {
     formAge.value = null;
     formKm.value = null;
 
-
 })
